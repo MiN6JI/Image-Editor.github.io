@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Editor JavaScript | MINGJI</title>
+	<link rel="stylesheet" href="celebrare_style.css">
+	<!-- BoxIcon and FontAwesome link -->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+	<div class="container disable">
+		<h2>Image / Icon</h2>
+		<div class="wrapper">
+			<div class="left-panel">
+				<img src="Image Uploader.svg" alt="preview-img">
+			</div>
+
+			<div class="right-panel">
+				<div class="frame">
+					<label class="title">Frames</label>
+					<div class="options">
+						<button class="btn active" id="btn-circle">circle</button>
+						<button class="btn " id="btn-heart">heart</button>
+						<button class="btn" id="btn-square">square</button>
+						<button class="btn" id="btn-rectangle">rectangle</button>
+					</div>
+					<div class="crop">
+						<div class="crop-info">
+							<p class="name">Crop</p>
+							<button><i class="fa-sharp fa-solid fa-crop-simple"></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="rotate">
+					<label class="title">Rotate & Flip</label>
+					<div class="options">
+						<button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="mains">
+			<div class="row">
+				<button class="upload-img">Upload Image</button>
+				<button class="save-img">Save Image</button>
+				<input type="file" class="file-input" accept="image/*" hidden>
+			</div>
+			<button class="reset-filter">Reset</button>
+		</div>
+	</div>
+
+	<script src="celebrare_script.js"></script>
+	
+</body>
+</html>

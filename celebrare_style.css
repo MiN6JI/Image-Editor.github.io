@@ -1,0 +1,239 @@
+/* :root{
+    --circle: "M149.975 274.95C218.997 274.95 274.95 218.997 274.95 149.975C274.95 80.9532 218.997 25 149.975 25C80.9532 25 25 80.9532 25 149.975C25 218.997 80.9532 274.95 149.975 274.95Z" ;
+
+    --heart: "M153.627 75.1588C120.827 18.6963 28.6269 35.1838 28.6269 105.921C28.6269 152.484 82.9394 202.509 144.914 262.671C147.339 265.034 150.489 266.209 153.627 266.209C156.764 266.209 159.914 265.034 162.339 262.671C224.552 202.284 278.627 152.496 278.627 105.921C278.627 34.9463 186.177 19.1213 153.627 75.1588V75.1588Z";
+
+    --square: "M275.25 49.5556C275.25 43.554 269.976 37 261.333 37H38.6667C30.0383 37 24.75 43.5163 24.75 49.5556V250.444C24.75 258.241 31.9867 263 38.6667 263H261.333C267.986 263 275.25 258.241 275.25 250.444V49.5556Z"; 
+
+    --rectangle: "M367 49.5556C367 43.554 359.967 37 348.444 37H51.5556C40.0511 37 33 43.5163 33 49.5556V250.444C33 258.241 42.6489 263 51.5556 263H348.444C357.314 263 367 258.241 367 250.444V49.5556Z"; 
+
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+	padding: 10px;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background: #CFF5E7;
+  }
+
+  .container{
+	width: 850px;
+	padding: 30px 35px 35px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .container h2{
+	margin-left: 15px;
+	margin-top: -8px;
+	font-size: 22px;
+	font-weight: 500;
+  }
+
+  .container.disable .right-panel,
+.container.disable .mains .reset-filter,
+.container.disable .mains .save-img{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+  .container .wrapper{
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px 0;
+	min-height: 335px;
+  }
+
+  .wrapper .right-panel{
+	padding: 15px 20px;
+	width: 280px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+  }
+
+  .right-panel .title{
+	display: block;
+	font-size: 16px;
+	margin-bottom: 12px;
+  }
+
+  .right-panel .options{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+
+  .right-panel button{
+	outline: none;
+	height: 40px;
+	font-size: 14px;
+	color: #6C757D;
+	background: #fff;
+	border-radius: 3px;
+	margin-bottom: 8px;
+	border: 1px solid #aaa;
+  }
+
+  .right-panel .frame button{
+	width: calc(100% / 2 - 4px);
+  }
+
+  .right-panel .crop button{
+	width: calc(100% / 4 - 3px);
+  }
+
+  .right-panel button:hover{
+	background: #f5f5f5;
+  }
+
+  .frame button.active{
+	color: #fff;
+	border-color: #0D4C92;
+	background: #0D4C92;
+  }
+
+  .frame .crop .crop-info{
+	display: flex;
+	flex-direction: column;
+	color: #464646;
+	font-size: 14px;
+  }
+
+  .frame .crop .crop-info button{
+	margin: 3px 3px 0px 0px;
+  }
+
+  .right-panel .rotate button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(100% / 4 - 3px);
+  }
+
+  .right-panel .crop{
+	margin-top: 12px;
+  }
+
+  .right-panel .rotate{
+	margin-top: 17px;
+  }
+
+.rotate .options button:nth-child(3),
+.rotate .options button:nth-child(4){
+  font-size: 18px;
+}
+
+.wrapper .left-panel{
+	flex-grow: 1;
+	display: flex;
+	overflow: hidden;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: left;
+  }
+
+  .left-panel img{
+	max-width: 490px;
+	max-height: 335px;
+	width: 100%;
+	height: 100%;
+	    /* clip-path: path(var(--heart)); */
+	/* object-fit: contain; */
+  }
+  
+  .mains{
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+  }
+
+  .mains button{
+	padding: 11px 20px;
+	font-size: 14px;
+	color: #fff;
+	background: #fff;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+  }
+
+  .mains .reset-filter{
+	background: #fff;
+	color: #6C757D;
+	border: 1px solid #6C757D;
+  }
+
+  .mains .upload-img{
+	background: #6C757D;
+	border: 1px solid #6C757D;
+  }
+
+  .mains .save-img{
+	background: #0D4C92;
+	border: 1px solid #0D4C92;
+  }
+
+  @media screen and (max-width: 860px) {
+	.wrapper .left-panel img{
+		width: 400px;
+		margin: 10px;
+		}
+  }
+
+  @media screen and (max-width: 760px) {
+	.container{
+	padding: 25px;
+	}
+	.container .wrapper{
+	flex-wrap: wrap-reverse;
+	}
+	.wrapper .right-panel{
+	width: 100%;
+	}
+	.wrapper .left-panel img{
+	width: 400px;
+	margin: 10px;
+	}
+	.wrapper .left-panel{
+	justify-content: center;
+	width: 100%;
+	margin: 0 0 15px;
+	}
+  }
+  
+  @media screen and (max-width: 500px) {
+	.mains button{
+		font-size: smaller;
+		height: 100%;
+	width: 50%;
+	margin: 0px 15px 10px 0px;
+	}
+
+	.mains button.reset-filter{
+		height: 100%;
+		width: 30%;
+		justify-content: center;
+	}
+	.mains .row{
+		display: flex;
+		flex-direction: row;
+		font-size: smaller;
+	}
+	.mains .row .save-img{
+	margin-left: 0px;
+	}
+  }
